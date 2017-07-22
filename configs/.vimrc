@@ -16,13 +16,17 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
 " plugin from http://vim-scripts.org/vim/scripts.html
 
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
+" Plugin 'vim-airline/vim-airline'
 Plugin 'klen/python-mode'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'Valloric/MatchTagAlways'
 Plugin 'mattn/emmet-vim'
+Plugin 'ap/vim-css-color'
+Plugin 'Chiel92/vim-autoformat'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 
-
+execute pathogen#infect()
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -40,6 +44,18 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 
 set t_Co=256
+
+set autoread
+
+set hlsearch
+
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+set splitbelow
+set splitright
 
 silent! map <F2> :NERDTreeFind<CR>
 
@@ -59,12 +75,16 @@ syntax enable
 
 " air-line
 let g:airline_powerline_fonts = 1
-set guifont=Terminess\ Powerline
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
 endif
 
 let g:airline_symbols.space = "\ua0"
+
+let g:airline_powerline_fonts = 1                                                                                 
+let g:airline_exclude_preview=1
+
+let g:airline#extensions#tabline#enabled = 1
 
 let g:airline_theme='murmur'
 

@@ -21,8 +21,6 @@ exec --no-startup-id feh --bg-scale "/home/grim/Pictures/space.jpeg"
 
 exec --no-startup-id numlockx
 
-#exec --no-startup-id indicator-kdeconnect
-
 exec --no-startup-id dunst
 
 exec --no-startup-id compton -f
@@ -35,8 +33,6 @@ exec --no-startup-id conky -c ~/.conky/conky1.conf
 exec --no-startup-id conky -c ~/.conky/conkyrings/rings1
 
 exec --no-startup-id nm-applet
-
-exec --no-startup-id firefox
 
 assign [class="Firefox-esr"] $ws1
 assign [class="Google-chrome"] $ws2
